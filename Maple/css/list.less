@@ -1,0 +1,56 @@
+@import url("m_style.css");
+.full(@w,@h,@b){
+    width: @w;
+    height: @h;
+    background: @b;
+}
+.box(@ver){
+    display: -webkit-box;
+    -webkit-box-orient: @ver;
+}
+body,html,.wrap{
+    .full(100%,100%,none);
+}
+.wrap{
+    .box(vertical);
+    header{
+        .full(100%,5rem,none);
+        .box(horizontal); 
+        border-bottom:1px solid #ccc ;      
+        .left{
+            line-height: 3.5rem;
+              -webkit-flex: 1;
+            .input_search{
+                .full(18rem,auto,#eeeeee);
+                border-radius: 0.4rem;
+                line-height: 3.5rem;
+                .box(horizontal);
+                margin: 1rem;
+                span{
+                    margin: 0 0.6rem;
+                    
+                    img{
+                        .full(1.2rem,auto,none);
+                    }
+                }
+                input{
+                    display: block;                  
+                    background: #eee;
+                    border: none;
+                    outline: none;
+                    line-height: 3.5rem;
+                }
+            }
+        }
+        .right{
+            .full(3rem,auto,none); 
+            line-height: 5rem;
+            position: absolute;
+            right: 1rem;
+            a{                          
+                color: red;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

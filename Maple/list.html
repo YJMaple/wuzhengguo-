@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>搜索专家</title>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		 <script type="text/javascript">
+		(function (doc, win) {
+			  var docEl = doc.documentElement,
+			    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			    recalc = function () {
+			      var clientWidth = docEl.clientWidth;
+			      if (!clientWidth) return;
+			      docEl.style.fontSize = 10 * (clientWidth / 320) + 'px';
+			    };
+			
+			  if (!doc.addEventListener) return;
+			  win.addEventListener(resizeEvt, recalc, false);
+			  doc.addEventListener('DOMContentLoaded', recalc, false);
+			})(document, window);
+	    </script>
+		<link rel="stylesheet" type="text/css" href="css/list.css"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<header>
+				<div class="left">
+					<div class="input_search">
+				    <span><img src="img/8_07.jpg"/></span>
+				    <input type="text" placeholder="输入你要查找的导师姓名" />
+			        </div>
+				</div>
+				<div class="right">
+					<a>取消</a>
+				</div>			    
+			</header>
+		</div>
+	</body>
+</html>
